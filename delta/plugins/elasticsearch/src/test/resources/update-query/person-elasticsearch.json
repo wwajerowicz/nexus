@@ -1,0 +1,26 @@
+{
+  "@id": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/{{name}}",
+  "@type": [
+    "http://schema.org/Person",
+    "http://www.w3.org/ns/prov#Agent"
+  ],
+  "properties": [
+    {
+      "path": "http://schema.org/affiliation",
+      "@id": "https://www.grid.ac/institutes/institute",
+      "@type": [
+        "http://www.w3.org/ns/prov#Agent",
+        "http://schema.org/Organization"
+      ]
+    },
+    {
+      "path": "http://schema.org/email"
+    },
+    {
+      "path": "http://schema.org/familyName"
+    },
+    {
+      "path": "http://schema.org/givenName"
+    }
+  ]
+}

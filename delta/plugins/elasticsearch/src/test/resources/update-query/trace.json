@@ -1,0 +1,212 @@
+{
+  "@id": "https://bbp.epfl.ch/neurosciencegraph/data/traces/373d8fae-69a7-44a4-9c50-56a06befaaa3",
+  "@type": [
+    "http://schema.org/Dataset",
+    "https://neuroshapes.org/Trace",
+    "http://www.w3.org/ns/prov#Entity"
+  ],
+  "http://schema.org/dateCreated": [
+    {
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value": "2018-08-15T16:46:02+00:00"
+    }
+  ],
+  "http://schema.org/description": [
+    {
+      "@value": "This dataset is about electrophysiology traces recorded from cell JY180815_A_2-c3 for the project JY. The dataset contains one distribution of the traces in RAB file format."
+    }
+  ],
+  "http://schema.org/distribution": [
+    {
+      "@type": [
+        "http://schema.org/DataDownload"
+      ],
+      "http://schema.org/contentSize": [
+        {
+          "http://schema.org/unitCode": [
+            {
+              "@value": "bytes"
+            }
+          ],
+          "http://schema.org/value": [
+            {
+              "@value": 31261763
+            }
+          ]
+        }
+      ],
+      "http://schema.org/contentUrl": [
+        {
+          "@id": "https://bbp.epfl.ch/nexus/v1/files/public/thalamus/18c104ea-7c81-4bca-996d-9f316598cd28"
+        }
+      ],
+      "http://schema.org/encodingFormat": [
+        {
+          "@value": "application/octet-stream"
+        }
+      ],
+      "http://schema.org/name": [
+        {
+          "@value": "JY180815_A_2-c3.rab"
+        }
+      ],
+      "https://neuroshapes.org/digest": [
+        {
+          "http://schema.org/algorithm": [
+            {
+              "@value": "SHA-256"
+            }
+          ],
+          "http://schema.org/value": [
+            {
+              "@value": "8c5c151fe0cb812c61232203af1203d0ca2030281a3de705d3b930d8a5f288ac"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "http://schema.org/identifier": [
+    {
+      "@value": "JY180815_A_2-c3"
+    }
+  ],
+  "http://schema.org/isPartOf": [
+    {
+      "@id": "https://bbp.epfl.ch/neurosciencegraph/data/traces/56adaa89-cd11-4071-a3eb-07f18881af2e",
+      "@type": [
+        "https://neuroshapes.org/Trace"
+      ]
+    }
+  ],
+  "http://schema.org/name": [
+    {
+      "@value": "JY180815_A_2"
+    }
+  ],
+  "http://www.w3.org/2004/02/skos/core#note": [
+    {
+      "@value": "JY"
+    }
+  ],
+  "https://neuroshapes.org/brainLocation": [
+    {
+      "@type": [
+        "https://neuroshapes.org/BrainLocation"
+      ],
+      "https://neuroshapes.org/brainRegion": [
+        {
+          "@id": "http://api.brain-map.org/api/v2/data/Structure/718",
+          "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+              "@value": "Ventral posterolateral nucleus of the thalamus"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "https://neuroshapes.org/contribution": [
+    {
+      "@type": [
+        "https://neuroshapes.org/Contribution"
+      ],
+      "http://www.w3.org/ns/prov#agent": [
+        {
+          "@id": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/jyi",
+          "@type": [
+            "http://www.w3.org/ns/prov#Agent",
+            "http://schema.org/Person"
+          ],
+          "http://schema.org/familyName": [
+            {
+              "@value": "Yi"
+            }
+          ],
+          "http://schema.org/givenName": [
+            {
+              "@value": "Jane"
+            }
+          ]
+        }
+      ],
+      "http://www.w3.org/ns/prov#hadRole": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/CRO_0000036",
+          "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+              "@value": "data collection role"
+            }
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+              "@value": "experimenter"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "https://neuroshapes.org/objectOfStudy": [
+    {
+      "@id": "http://bbp.epfl.ch/neurosciencegraph/taxonomies/objectsofstudy/singlecells",
+      "@type": [
+        "https://neuroshapes.org/ObjectOfStudy"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Single Cell"
+        }
+      ]
+    }
+  ],
+  "https://neuroshapes.org/subject": [
+    {
+      "@type": [
+        "https://neuroshapes.org/Subject"
+      ],
+      "https://neuroshapes.org/age": [
+        {
+          "http://schema.org/unitCode": [
+            {
+              "@value": "days"
+            }
+          ],
+          "http://schema.org/value": [
+            {
+              "@value": 18
+            }
+          ],
+          "https://neuroshapes.org/period": [
+            {
+              "@value": "Post-natal"
+            }
+          ]
+        }
+      ],
+      "https://neuroshapes.org/species": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+          "@type": [
+            "http://www.w3.org/2002/07/owl#Class"
+          ],
+          "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+            {
+              "@id": "http://bbp.epfl.ch/neurosciencegraph/ontologies/speciestaxonomy/"
+            }
+          ],
+          "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+              "@value": "Mus musculus"
+            }
+          ],
+          "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+              "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10088"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

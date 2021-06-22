@@ -1,0 +1,40 @@
+{
+  "mappings": {
+    "properties": {
+      "@id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "properties": {
+        "type": "nested",
+        "properties": {
+          "path": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@id": {
+            "type": "keyword"
+          }
+        }
+      },
+      "relationships": {
+        "type": "nested",
+        "properties": {
+          "path": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@id": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

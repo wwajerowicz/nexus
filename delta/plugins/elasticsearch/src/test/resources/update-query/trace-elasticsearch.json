@@ -1,0 +1,149 @@
+{
+  "@id": "https://bbp.epfl.ch/neurosciencegraph/data/traces/{{uuid}}",
+  "@type": [
+    "http://schema.org/Dataset",
+    "https://neuroshapes.org/Trace",
+    "http://www.w3.org/ns/prov#Entity"
+  ],
+  "properties": [
+    {
+      "path": "http://schema.org/dateCreated",
+      "@type": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ]
+    },
+    {
+      "path": "http://schema.org/description"
+    },
+    {
+      "path": "http://schema.org/distribution / http://schema.org/contentSize / http://schema.org/unitCode"
+    },
+    {
+      "path": "http://schema.org/distribution / http://schema.org/contentSize / http://schema.org/value"
+    },
+    {
+      "path": "http://schema.org/distribution / http://schema.org/contentUrl",
+      "@id": "https://bbp.epfl.ch/nexus/v1/files/public/thalamus/18c104ea-7c81-4bca-996d-9f316598cd28"
+    },
+    {
+      "path": "http://schema.org/distribution / http://schema.org/encodingFormat"
+    },
+    {
+      "path": "http://schema.org/distribution / http://schema.org/name"
+    },
+    {
+      "path": "http://schema.org/distribution / https://neuroshapes.org/digest / http://schema.org/algorithm"
+    },
+    {
+      "path": "http://schema.org/distribution / https://neuroshapes.org/digest / http://schema.org/value"
+    },
+    {
+      "path": "http://schema.org/distribution",
+      "@type": [
+        "http://schema.org/DataDownload"
+      ]
+    },
+    {
+      "path": "http://schema.org/identifier"
+    },
+    {
+      "path": "http://schema.org/isPartOf",
+      "@id": "https://bbp.epfl.ch/neurosciencegraph/data/traces/56adaa89-cd11-4071-a3eb-07f18881af2e",
+      "@type": [
+        "https://neuroshapes.org/Trace"
+      ]
+    },
+    {
+      "path": "http://schema.org/name"
+    },
+    {
+      "path": "http://www.w3.org/2004/02/skos/core#note"
+    },
+    {
+      "path": "https://neuroshapes.org/brainLocation / https://neuroshapes.org/brainRegion / http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    {
+      "path": "https://neuroshapes.org/brainLocation / https://neuroshapes.org/brainRegion",
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/718"
+    },
+    {
+      "path": "https://neuroshapes.org/brainLocation",
+      "@type": [
+        "https://neuroshapes.org/BrainLocation"
+      ]
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#agent / http://schema.org/familyName"
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#agent / http://schema.org/givenName"
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#agent",
+      "@id": "https://bbp.epfl.ch/nexus/v1/realms/bbp/users/jyi",
+      "@type": [
+        "http://www.w3.org/ns/prov#Agent",
+        "http://schema.org/Person"
+      ]
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#hadRole / http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#hadRole / http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    {
+      "path": "https://neuroshapes.org/contribution / http://www.w3.org/ns/prov#hadRole",
+      "@id": "http://purl.obolibrary.org/obo/CRO_0000036"
+    },
+    {
+      "path": "https://neuroshapes.org/contribution",
+      "@type": [
+        "https://neuroshapes.org/Contribution"
+      ]
+    },
+    {
+      "path": "https://neuroshapes.org/objectOfStudy / http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    {
+      "path": "https://neuroshapes.org/objectOfStudy",
+      "@id": "http://bbp.epfl.ch/neurosciencegraph/taxonomies/objectsofstudy/singlecells",
+      "@type": [
+        "https://neuroshapes.org/ObjectOfStudy"
+      ]
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/age / http://schema.org/unitCode"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/age / http://schema.org/value"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/age / https://neuroshapes.org/period"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/species / http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@id": "http://bbp.epfl.ch/neurosciencegraph/ontologies/speciestaxonomy/"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/species / http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/species / http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10088"
+    },
+    {
+      "path": "https://neuroshapes.org/subject / https://neuroshapes.org/species",
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class"
+      ]
+    },
+    {
+      "path": "https://neuroshapes.org/subject",
+      "@type": [
+        "https://neuroshapes.org/Subject"
+      ]
+    }
+  ]
+}
