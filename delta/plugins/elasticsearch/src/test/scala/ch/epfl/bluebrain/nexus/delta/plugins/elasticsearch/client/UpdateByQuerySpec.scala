@@ -35,6 +35,11 @@ class UpdateByQuerySpec
 
   "An UpdateByQuerySpec" should {
     "ingest data" in {
+      val maxConcurrent = 4
+      val bulkSize = 100
+      // TODO: Get the progress from some file
+      val progress = 0
+
       // multiple of 100.000
       // 60 % reconstructedCells
       // 35 % traces
@@ -43,6 +48,7 @@ class UpdateByQuerySpec
       val reconstructedCellsCount = 60000 * multiplier
       val tracesCount = 35000 * multiplier
       val usersCount = 5000 * multiplier
+
       val reconstructedCellJson = jsonContentOf("/update-query/reconstructed-cell-elasticsearch.json")
       val traceJson = jsonContentOf("/update-query/trace-elasticsearch.json")
       val userJson = jsonContentOf("/update-query/person-elasticsearch.json")
@@ -59,8 +65,7 @@ class UpdateByQuerySpec
         .range[Task](reconstructedCellsCount + tracesCount, reconstructedCellsCount + tracesCount + usersCount)
         .map(idx => idx -> userJson.deepMerge(Json.obj(keywords.id -> s"https://bbp.epfl.ch/nexus/v1/realms/bbp/users/$idx".asJson)))
 
-
-      val stream = (reconstructedCells ++ traces ++ users).groupWithin(100, 2.minute).parEvalMap(4) { chunks =>
+      val stream = (reconstructedCells ++ traces ++ users).drop(progress).groupWithin(bulkSize, 2.minute).parEvalMap(maxConcurrent) { chunks =>
         val progress = chunks.head.fold(0)(_._1) + chunks.size
         val indexDocuments = chunks.map { case (idx, doc) => ElasticSearchBulk.Index(index, idx.toString, doc) }
         client.bulk(indexDocuments.toList) >> Task.pure(progress)
@@ -68,6 +73,7 @@ class UpdateByQuerySpec
         Task.delay(
           println(s"Progress: ${100 * progress / (reconstructedCellsCount + tracesCount + usersCount).toDouble}% ($progress)")
         )
+        // TODO: Store progress variable in some file
       }
       stream.compile.drain.runSyncUnsafe()
       println("END")

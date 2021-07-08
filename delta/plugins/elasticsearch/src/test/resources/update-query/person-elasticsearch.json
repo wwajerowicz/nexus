@@ -6,21 +6,39 @@
   ],
   "properties": [
     {
-      "path": "http://schema.org/affiliation",
-      "@id": "https://www.grid.ac/institutes/institute",
+      "@id": "https://www.grid.ac/institutes/",
       "@type": [
         "http://www.w3.org/ns/prov#Agent",
         "http://schema.org/Organization"
-      ]
+      ],
+      "path": "http://schema.org/affiliation",
+      "isInArray": false
     },
     {
-      "path": "http://schema.org/email"
+      "dataType": "string",
+      "path": "http://schema.org/email",
+      "isInArray": false
     },
     {
-      "path": "http://schema.org/familyName"
+      "dataType": "string",
+      "path": "http://schema.org/familyName",
+      "isInArray": false
     },
     {
-      "path": "http://schema.org/givenName"
+      "dataType": "string",
+      "path": "http://schema.org/givenName",
+      "isInArray": false
+    }
+  ],
+  "relationships": [
+    {
+      "@id": "https://www.grid.ac/institutes/",
+      "@type": [
+        "http://www.w3.org/ns/prov#Agent",
+        "http://schema.org/Organization"
+      ],
+      "path": "http://schema.org/affiliation",
+      "isInArray": false
     }
   ]
 }
