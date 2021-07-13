@@ -183,12 +183,12 @@ lazy val docs = project
                          |""".stripMargin)
     },
     Compile / paradoxNavigationDepth := 4,
-    Compile / paradoxProperties      ++=
+    Compile / paradoxProperties     ++=
       Map(
-        "github.base_url" -> "https://github.com/BlueBrain/nexus/tree/master",
+        "github.base_url"       -> "https://github.com/BlueBrain/nexus/tree/master",
         "project.version.short" -> "Snapshot",
-        "current.url" -> "https://bluebrainnexus.io/docs/",
-        "version.snapshot" -> "true"
+        "current.url"           -> "https://bluebrainnexus.io/docs/",
+        "version.snapshot"      -> "true"
       ),
     paradoxRoots                     := List("docs/index.html"),
     previewPath                      := "docs/index.html",
@@ -527,7 +527,7 @@ lazy val testPlugin = project
 
 lazy val elasticsearchPlugin = project
   .in(file("delta/plugins/elasticsearch"))
-  .enablePlugins(BuildInfoPlugin)
+  .enablePlugins(BuildInfoPlugin, GatlingPlugin)
   .settings(shared, compilation, assertJavaVersion, discardModuleInfoAssemblySettings, coverage, release)
   .dependsOn(
     sdk        % "provided;test->test",
@@ -541,14 +541,20 @@ lazy val elasticsearchPlugin = project
     assembly / assemblyJarName := "elasticsearch.jar",
     assembly / assemblyOption  := (assembly / assemblyOption).value.copy(includeScala = false),
     libraryDependencies       ++= Seq(
-      kamonAkkaHttp     % Provided,
-      akkaTestKitTyped  % Test,
-      akkaSlf4j         % Test,
-      dockerTestKit     % Test,
-      dockerTestKitImpl % Test,
-      h2                % Test,
-      logback           % Test,
-      scalaTest         % Test
+      kamonAkkaHttp           % Provided,
+      akkaTestKitTyped        % Test,
+      akkaSlf4j               % Test,
+      dockerTestKit           % Test,
+      dockerTestKitImpl       % Test,
+      h2                      % Test,
+      logback                 % Test,
+      scalaTest               % Test,
+      "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.6.1" % Test excludeAll (
+        ExclusionRule(organization = "com.typesafe.akka")
+      ),
+      "io.gatling"            % "gatling-test-framework"    % "3.5.1" % Test excludeAll (
+        ExclusionRule(organization = "com.typesafe.akka")
+      )
     ),
     buildInfoKeys              := Seq[BuildInfoKey](version),
     buildInfoPackage           := "ch.epfl.bluebrain.nexus.delta.plugins.elasticsearch",

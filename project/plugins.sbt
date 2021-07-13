@@ -22,3 +22,6 @@ addSbtPlugin("com.geirsson"   % "sbt-ci-release"      % "1.5.7")
 addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.0")
 
 addSbtPlugin("com.tapad" % "sbt-docker-compose" % "1.0.35")
+
+
+addSbtPlugin("io.gatling" % "gatling-sbt" % "3.2.2")
