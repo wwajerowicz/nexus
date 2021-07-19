@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "properties": {
+      "@id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "properties": {
+        "type": "flattened"
+      },
+      "relationships": {
+        "type": "flattened"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 2
+    }
+  }
+}
